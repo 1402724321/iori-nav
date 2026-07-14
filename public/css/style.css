@@ -1564,6 +1564,122 @@ body .search-engine-option.active {
   }
 }
 
+/* 风格三下拉分类（仅桌面水平分类）：参考 eooce/Nav-Item 透明毛玻璃 + 白字蓝高亮
+   手机端走左上角侧栏滑出，无水平下拉 */
+@media (min-width: 768px) {
+  body.desktop-page-style3 .dropdown-menu,
+  body.desktop-page-style3 #horizontalMoreDropdown,
+  html.dark body.desktop-page-style3 .dropdown-menu,
+  html.dark body.desktop-page-style3 #horizontalMoreDropdown {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+    min-width: 120px;
+    max-width: none;
+    width: max-content;
+    padding: 0.15rem 0;
+    margin-top: -2px;
+    color: #fff;
+  }
+
+  body.desktop-page-style3 .dropdown-menu .menu-item-wrapper .dropdown-menu,
+  body.desktop-page-style3 #horizontalMoreDropdown .dropdown-menu {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+    margin-top: 0;
+  }
+
+  body.desktop-page-style3 .dropdown-item,
+  body.desktop-page-style3 #horizontalMoreDropdown .dropdown-item,
+  body.desktop-page-style3.custom-wallpaper .dropdown-item,
+  body.desktop-page-style3.custom-wallpaper #horizontalMoreDropdown .dropdown-item,
+  html.dark body.desktop-page-style3 .dropdown-item,
+  html.dark body.desktop-page-style3 #horizontalMoreDropdown .dropdown-item,
+  html:not(.dark) body.desktop-page-style3 .dropdown-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center !important;
+    width: 100% !important;
+    min-width: 0;
+    height: auto !important;
+    padding: 0.4rem 1rem !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    text-shadow: none !important;
+    white-space: nowrap;
+  }
+
+  body.desktop-page-style3 .dropdown-item:hover,
+  body.desktop-page-style3 #horizontalMoreDropdown .dropdown-item:hover,
+  body.desktop-page-style3.custom-wallpaper .dropdown-item:hover,
+  body.desktop-page-style3.custom-wallpaper #horizontalMoreDropdown .dropdown-item:hover,
+  html.dark body.desktop-page-style3 .dropdown-item:hover,
+  html.dark body.desktop-page-style3 #horizontalMoreDropdown .dropdown-item:hover,
+  html:not(.dark) body.desktop-page-style3 .dropdown-item:hover {
+    background: rgba(57, 157, 255, 0.25) !important;
+    background-color: rgba(57, 157, 255, 0.25) !important;
+    color: #399dff !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  body.desktop-page-style3 .dropdown-item.active,
+  body.desktop-page-style3 #horizontalMoreDropdown .dropdown-item.active,
+  body.desktop-page-style3.custom-wallpaper .dropdown-item.active,
+  body.desktop-page-style3.custom-wallpaper #horizontalMoreDropdown .dropdown-item.active,
+  html.dark body.desktop-page-style3 .dropdown-item.active,
+  html.dark body.desktop-page-style3 #horizontalMoreDropdown .dropdown-item.active,
+  html:not(.dark) body.desktop-page-style3 .dropdown-item.active {
+    background: rgba(57, 157, 255, 0.35) !important;
+    background-color: rgba(57, 157, 255, 0.35) !important;
+    color: #399dff !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+  }
+
+  /* 风格三下拉不显示底部蓝线伪元素 */
+  body.desktop-page-style3 .dropdown-item::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  body.desktop-page-style3 .dropdown-arrow-icon {
+    margin-left: 0.35rem;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0.7;
+  }
+
+  body.desktop-page-style3 .dropdown-item:hover .dropdown-arrow-icon,
+  body.desktop-page-style3 .dropdown-item.active .dropdown-arrow-icon {
+    color: #399dff;
+    opacity: 1;
+  }
+
+  body.desktop-page-style3 .nav-btn > svg {
+    color: inherit;
+    opacity: 0.75;
+  }
+}
+
 /* 侧边栏与 Overlay */
 @media (max-width: 1023px) {
   .mobile-sidebar { transform: translateX(-100%); transition: transform 0.3s ease; }
